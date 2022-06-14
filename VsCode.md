@@ -1,5 +1,31 @@
 Favoriete Visual Studio Code shortcuts
-### General
+
+- [Keyboard shortcuts](#keyboard-shortcuts)
+  - [General](#general)
+  - [Navigation](#navigation)
+  - [MultiCursor and Selection](#multicursor-and-selection)
+  - [Rich Language Editing](#rich-language-editing)
+  - [Editor management](#editor-management)
+  - [File management](#file-management)
+  - [Display](#display)
+  - [Debug](#debug)
+  - [Integrated terminal](#integrated-terminal)
+- [VS Code hacks](#vs-code-hacks)
+  - [VS Code Keybinding to Toggle Focus Between and Editor and Terminal](#vs-code-keybinding-to-toggle-focus-between-and-editor-and-terminal)
+  - [Markdown Table of contents](#markdown-table-of-contents)
+- [VSC persoonlijke instellingen](#vsc-persoonlijke-instellingen)
+  - [Exporting and importing specific settings](#exporting-and-importing-specific-settings)
+  - [Windows](#windows)
+  - [Linux](#linux)
+- [Addons installed](#addons-installed)
+  - [Getting a list of all installed extensions in VS Code](#getting-a-list-of-all-installed-extensions-in-vs-code)
+  - [Addons list](#addons-list)
+  - [A.k.a favoriete VS Code extensions](#aka-favoriete-vs-code-extensions)
+- [Jupyter notebooks in VSC](#jupyter-notebooks-in-vsc)
+
+# Keyboard shortcuts
+
+## General
 * ``Ctrl + Shift + P``  - Action panel
 * ``Ctrl + K + M`` - Change/set file language
 * ``Ctrl + B`` - Toggle side bar
@@ -10,18 +36,18 @@ Favoriete Visual Studio Code shortcuts
 * ``Alt + L, Alt + O`` : Open html page with live server 
 * ``Alt + L, Alt + C `` : Close live server
 
-### Navigation
+## Navigation
 * ``Ctrl + ` `` - Open terminal screen (Toggle between editor and terminal after hack!)
 * ``Ctrl + 1`` - Go to first editing pane (toggle between terminal and editor with these shortcuts!)
 * ``Ctrl + 2`` - Go to second editing pane (etc.)
 
-### MultiCursor and Selection
+## MultiCursor and Selection
 * ``Ctrl + SHIFT + ArrowUp/Down`` - Insert prompt vertical
 * ``Ctrl + D`` - Add next occurrence
 * ``Ctrl + SHIFT+L`` - Select all occurrences
 * ``Alt + ArrowUp/Down`` - Move line up/down
 
-### Rich Language Editing
+## Rich Language Editing
 * ``Ctrl + SHIFT + ArrowUp/Down`` - Copy current line above/below
 * ``ALT +  SHIFT + Arrow up/down`` : Enter multiple prompts on lines on samen position for editing multiple lines at once
 * ``Ctrl + Enter`` : Regel na invoeren
@@ -36,8 +62,7 @@ Favoriete Visual Studio Code shortcuts
 * ``Ctrl + /`` : Commentaar regel maken (van selectie)
 * ``Ctrl + Space`` : Property of methode selectie 
 
-
-### Editor management
+## Editor management
 * ``Ctrl + Shift + P - Icons`` : installeer of gebruik geinstalleerde icon themes 
 * ``Extensions openen + @`` : filteren en sorteren op catrgorieën etc. zoals @builtin voor reeds geinstalleerde extensions
 * ``Ctrl + , `` : Instellingen openen (bijv. tabkleur actieve tab veranderen)
@@ -48,8 +73,7 @@ Favoriete Visual Studio Code shortcuts
 * ``Ctrl + K, Ctrl + T `` : Change theme
 * ``Alt + Shift + B`` : Open page with particular browser
 
-
-### File management
+## File management
 * ``Ctrl + p`` : Bestand openen
 * ``Ctrl + Shift + T`` : Opent recent gesloten bestanden
 * ``Ctrl + r`` : Toont recent geopende folders en bestanden 
@@ -60,7 +84,7 @@ Favoriete Visual Studio Code shortcuts
 * ``git config --global core.editor "code -w"`` : gebruik code als primaire git config editor
 * ``git config --global -e`` : git config openen met code 
 
-### Display
+## Display
 * ``Ctrl + Shift + e`` : Explorer balk
 * ``Ctrl + Shift + f`` : Zoeken balk
 * ``Ctrl + Shift + g`` : Source control (git) balk
@@ -71,17 +95,17 @@ Favoriete Visual Studio Code shortcuts
 * ``Ctrl + k + z `` : Enter Zen mode (no distractions) 
 * ``Ctrl + Shift + v`` : Voorbeeld tonen 
 
-### Debug
+## Debug
 
-### Integrated terminal
+## Integrated terminal
 * ``Ctrl + PageDown/PageUp``  - Terminal scroll down / up
 * ``Ctrl + Home / End``  - Scroll to bottom / top
 
-
 https://shortcutworld.com/VSCode/win/Visual-Studio-Code_Shortcuts
 
-## VS Code hacks
-### VS Code Keybinding to Toggle Focus Between and Editor and Terminal
+# VS Code hacks
+
+## VS Code Keybinding to Toggle Focus Between and Editor and Terminal
 
 open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), then you can add the following two entries to be able to toggle the focus between an editor and opened terminal (and have it remain open)
 
@@ -100,8 +124,52 @@ open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), the
 ]
 ```
 
-## VSC persoonlijke instellingen
-### Windows
+## Markdown Table of contents
+
+Requires `Markdown All in One`
+
+Install with:
+
+```
+Ctrl + P
+
+ext install yzhang.markdown-all-in-one
+```
+
+Generate TOC with:
+
+```
+Ctrl + Shift + P
+
+Select Markdown: Create Table of Contents
+```
+
+# VSC persoonlijke instellingen
+
+## Exporting and importing specific settings
+
+With the current version of Visual Studio Code as of this writing (1.22.1), you can find your settings in
+
+Linux
+
+	~/.config/Code/User
+
+Windows 10
+
+	C:\Users\username\AppData\Roaming\Code\User
+	use these in Windows so you don't have to type the username in the path back and forth
+	%APPDATA%\Code\User
+	%USERPROFILE%\.vscode\extensions 
+MacOS
+
+	~/Library/Application Support/Code/User/
+
+The files are settings.json and keybindings.json. Simply copy them to the target machine.
+
+
+## Windows
+
+Get the list of personal settings below by using the command: `Ctrl + ,`
 
 ```
 {
@@ -111,14 +179,13 @@ open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), the
     "editor.fontFamily": "'Source Code Pro', Hack, Consolas, 'Courier New', monospace",
     "editor.formatOnSave": true,
     "editor.suggestSelection": "first",
-    "window.zoomLevel": 1,
     "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.statusBar.visible": true,
-    "python.pythonPath": "C:\\Users\\Bas\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+    // "python.pythonPath": "/usr/bin/python",
+    // "python.pythonPath": "C:\\Users\\Bas\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
     "python.linting.enabled": true,
     "python.formatting.provider": "black",
     "python.languageServer": "Pylance",
@@ -126,7 +193,7 @@ open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), the
     "debug.console.fontSize": 16,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.fontWeight": "500",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName"
     },
@@ -139,22 +206,64 @@ open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), the
     "sync.gist": "31c1c7aa59f6aa27c9af94376123d1ad",
     "better-comments.multilineComments": true,
     "better-comments.highlightPlainText": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.defaultInterpreterPath": "C:\\Users\\BWN\\Anaconda3\\python.exe",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "workbench.colorTheme": "Default Light+",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": -1,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
 }
 ```
 
-### Linux
+## Linux
 
 ```
 
 ```
 
-## Addons installed
+# Addons installed
+
+## Getting a list of all installed extensions in VS Code
+
+1. Make sure you have the most current version of Visual Studio Code. If you install via a company portal, you might not have the most current version.
+
+2. On machine A
+
+Unix:
+
+	code --list-extensions | xargs -L 1 echo code --install-extension
+
+Windows (PowerShell, e. g. using Visual Studio Code's integrated Terminal):
+
+	code --list-extensions | % { "code --install-extension $_" }
+
+3. Copy and paste the echo output to machine B
+
+Sample output
+
+code --install-extension Angular.ng-template
+code --install-extension DSKWRK.vscode-generate-getter-setter
+code --install-extension EditorConfig.EditorConfig
+code --install-extension HookyQR.beautify
+
+==
+Visual Studio Code looks for extensions under your extensions folder .vscode/extensions. Depending on your platform it is located:
+
+Windows 
+	%USERPROFILE%\.vscode\extensions
+Mac 
+	~/.vscode/extensions
+Linux 
+	~/.vscode/extensions
+
+Alternately, just go to the Extensions, show installed extensions, and install those on your target installation. For me, copying the extensions worked just fine, but it may be extension-specific, particularly if moving between platforms, depending on what the extension does.
+
+## Addons list
 
 ```
 [
@@ -474,8 +583,7 @@ open your keybindings.json file Alt+k Alt+s (windows) Ctrl+k Ctrl+s (Linux), the
 Zie ook: https://gist.github.com/Willemstijn/31c1c7aa59f6aa27c9af94376123d1ad
 
 
-
-## Favoriete VS Code extensions
+## A.k.a favoriete VS Code extensions
 
 Installed VS Code extensions (@installed)
 
@@ -508,7 +616,8 @@ Installed VS Code extensions (@installed)
 * Vscode icons
 * Vscode-pdf
 
-## Jupyter notebooks in VSC
+
+# Jupyter notebooks in VSC
 
 Van https://www.youtube.com/watch?v=FSdIoJdSnig
 
@@ -528,60 +637,4 @@ Zie ook:
 * https://code.visualstudio.com/docs/python/jupyter-support
 * https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
-# Other VS Code tips and tricks
-
-## Getting a list of all installed extensions in VS Code
-
-1. Make sure you have the most current version of Visual Studio Code. If you install via a company portal, you might not have the most current version.
-
-2. On machine A
-
-Unix:
-
-	code --list-extensions | xargs -L 1 echo code --install-extension
-
-Windows (PowerShell, e. g. using Visual Studio Code's integrated Terminal):
-
-	code --list-extensions | % { "code --install-extension $_" }
-
-3. Copy and paste the echo output to machine B
-
-Sample output
-
-code --install-extension Angular.ng-template
-code --install-extension DSKWRK.vscode-generate-getter-setter
-code --install-extension EditorConfig.EditorConfig
-code --install-extension HookyQR.beautify
-
-==
-Visual Studio Code looks for extensions under your extensions folder .vscode/extensions. Depending on your platform it is located:
-
-Windows 
-	%USERPROFILE%\.vscode\extensions
-Mac 
-	~/.vscode/extensions
-Linux 
-	~/.vscode/extensions
-
-Alternately, just go to the Extensions, show installed extensions, and install those on your target installation. For me, copying the extensions worked just fine, but it may be extension-specific, particularly if moving between platforms, depending on what the extension does.
-
-## Exporting and importing specific settings
-
-With the current version of Visual Studio Code as of this writing (1.22.1), you can find your settings in
-
-Linux
-
-	~/.config/Code/User
-
-Windows 10
-
-	C:\Users\username\AppData\Roaming\Code\User
-	use these in Windows so you don't have to type the username in the path back and forth
-	%APPDATA%\Code\User
-	%USERPROFILE%\.vscode\extensions 
-MacOS
-
-	~/Library/Application Support/Code/User/
-
-The files are settings.json and keybindings.json. Simply copy them to the target machine.
 
